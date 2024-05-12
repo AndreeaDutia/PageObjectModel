@@ -17,6 +17,7 @@ public class MenuPage {
 	public By loginLink = By.linkText("Login");
 	public By contactsLink = By.linkText("CONTACTS");
 	public By shopLink = By.linkText("BOOKS");
+	public By BlogLink = By.linkText("BLOG");
 	/* public void navigateToLogin() {
 		driver.findElement(By.linkText("Login")).click();
 		
