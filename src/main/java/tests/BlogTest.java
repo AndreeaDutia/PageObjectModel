@@ -19,7 +19,7 @@ public class BlogTest  extends BaseTest  {
 		BlogPage post = new BlogPage(driver);
 		
 		menu.navigateTo(menu.BlogLink);
-		post.postComment("comentariu","nume","test@test.ro","website");
+		post.postComment("comentariu","nume","test1@test.ro","website");
 		
 		assertTrue(post.checkMsgIsDisplayed(post.successMessage));
 		
