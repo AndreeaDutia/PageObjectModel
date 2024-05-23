@@ -20,6 +20,6 @@ public class ShadowDomeExample extends BaseTest {
 		
 		WebElement bookDayPicture = driver.findElement(By.cssSelector("div[id='shadow-host']")).getShadowRoot().findElement(By.cssSelector("img[src*='www.keybooks.ro_.png']"));
 		assertTrue(bookDayPicture.isDisplayed());
-		System.err.println("TEST CEVA CEVA");
+		System.err.println("TEST CEVA CEVA");// system.err Printeaza cu rosu
 		}
 }
