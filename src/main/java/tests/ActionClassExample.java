@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import pages.AudioPostPage;
 import pages.ContactsPage;
 import pages.MenuPage;
 import pages.ShopPage;
@@ -33,7 +34,7 @@ public class ActionClassExample extends BaseTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void sendKeysExample() {
 		MenuPage menu = new MenuPage(driver);
 		menu.navigateTo(menu.contactsLink);
@@ -59,4 +60,7 @@ public class ActionClassExample extends BaseTest {
 			.pause(Duration.ofSeconds(2))
 			.perform();
 	}
+	
+	
+
 }

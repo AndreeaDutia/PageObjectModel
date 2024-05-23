@@ -22,6 +22,7 @@ public class BlogPage {
 	public By postButton = By.id("send_comment");
 	
 	
+	
 	public void postComment(String comment, String name, String email, String website) {
 		
 		driver.findElement(blogMenu).click();

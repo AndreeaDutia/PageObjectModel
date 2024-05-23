@@ -21,6 +21,9 @@ public class MenuPage {
 	public By shopLink = By.linkText("BOOKS");
 	public By BlogLink = By.linkText("BLOG");
 	public By aboutLink = By.linkText("ABOUT");
+	public By postLink = By.linkText("Post Formats");
+	public By audioLink = By.linkText("Audio post");
+	
 	/* public void navigateToLogin() {
 		driver.findElement(By.linkText("Login")).click();
 		
