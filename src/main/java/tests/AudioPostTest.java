@@ -16,11 +16,12 @@ public class AudioPostTest extends BaseTest {
 		menu.navigateTo(menu.audioLink);
 		AudioPostPage audio = new AudioPostPage(driver);
 		audio.timeDragAndDrop(audio.timeSliderPosition,200,0);
+		audio.VolumeDragAndDrop(audio.volumeSliderPosition,50,0);
 		
 		
 	}
 	
-	@Test
+	//@Test
 	public void volumeSlider() {
 		MenuPage menu = new MenuPage(driver);
 		menu.hoverElement(menu.BlogLink);
