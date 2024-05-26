@@ -1,5 +1,6 @@
 package tests;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -11,6 +12,7 @@ import pages.BlogPage;
 import pages.LoginPage;
 import pages.MenuPage;
 import pages.ShippingAddressPage;
+import pages.ShopPage;
 import seleniumutils.BaseTest;
 import utils.PropertiesFileProcessor;
 
@@ -34,12 +36,25 @@ public class ShippingTest extends BaseTest{
 	@Test(priority=2)
 	public void staleExample() throws InterruptedException {
 		MenuPage menu = new MenuPage(driver); 
-		ShippingAddressPage shipping = new ShippingAddressPage(driver);
+		
+		ShopPage shopPage = new ShopPage(driver);
+		driver.navigate().to("https://keybooks.ro/account/edit-address/shipping/");
 		
 		
-	WebElement element = driver.findElement(By.linkText("Addresses"));
-	Select select = new Select(element); 
+	WebElement country = driver.findElement(By.cssSelector("select[name='shipping_country']"));
+	Select select = new Select(country); 
 	select.selectByIndex(41);
+	//Thread.sleep(5000);
+	//assertEquals(getCurrentSelectedOption(),"Canada");
+	
+	WebElement province = driver.findElement(By.cssSelector("select[name='shipping_state']"));
+	Select select1 = new Select(province); 
+	select1.selectByValue("NL");
+	
+	
 	
 	}
+
+	
+	
 }
