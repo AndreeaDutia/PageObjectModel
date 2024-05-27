@@ -51,13 +51,46 @@ public class JSExecutorExample extends BaseTest {
 		//alterativa pentru sendkeys()
 		jse.executeScript("arguments[0].value='cooking'", searchInput);
 		*/
-		jse.executeScript("document.getElementsByClassName('icon-search')[0].click()");
 		
+		//alternativa pentru click
+		jse.executeScript("document.getElementsByClassName('icon-search')[0].click()");
+		//alterativa pentru sendkeys()
 		jse.executeScript("document.getElementsByClassName('search_field')[0].value='cooking'");
-		
+		//alternativa pentru click
 		jse.executeScript("document.getElementsByClassName('icon-search')[0].click()");
 		
-				
-	}
+		//jse.executeScript("document.getElementsByClassName('icon-search')[0].click();document.getElementsByClassName('search_field')[0].value='cooking';document.getElementsByClassName('icon-search')[0].click()");
+		
+		//alternativa pentru getText()
+		String bookTitle = jse.executeScript("return document.getElementsByClassName('post_title')[0].childNodes[0].innerText").toString();
+		System.out.println(bookTitle);
+		
+		//alternativa pentru isDisplayes()
+		boolean titleVisible = (boolean) jse.executeScript("return document.getElementsByClassName('post_title')[0].childNodes[0].checkVisibility()");
+		System.out.println(titleVisible);
+		
+		String titleVisibleString = jse.executeScript("return document.getElementsByClassName('post_title')[0].childNodes[0].checkVisibility()").toString();
+		System.out.println(titleVisibleString);
+		
+		//alternativa pentru getTitle()
+		String pageTitle = jse.executeScript("return document.title").toString();
+		System.out.println(pageTitle);
+		System.out.println(driver.getTitle());
+		
+		//alternative pentru getCurrentUrl()
+		String pageURL = jse.executeScript("return document.URL").toString();
+		System.out.println(pageURL);
+		System.out.println(driver.getCurrentUrl());
+		
+		jse.executeScript("document.getElementsByClassName('popup_link')[0].click()");
+		//alternativa pentru isSelected
+		boolean checkBoxSelected = (boolean) jse.executeScript("return document.getElementById('rememberme').checked");
+		System.out.println(checkBoxSelected);
+		jse.executeScript("document.getElementById('rememberme').click()");
+		boolean checkBoxSelectedAfterClick = (boolean) jse.executeScript("return document.getElementById('rememberme').checked");
+		System.out.println(checkBoxSelectedAfterClick);
+		
+		
+		}
 
 }
