@@ -23,6 +23,7 @@ public class MenuPage {
 	public By aboutLink = By.linkText("ABOUT");
 	public By postLink = By.linkText("Post Formats");
 	public By audioLink = By.linkText("Audio post");
+	public By eventsLink= By.linkText("EVENTS");
 	
 	/* public void navigateToLogin() {
 		driver.findElement(By.linkText("Login")).click();
@@ -46,6 +47,8 @@ public class MenuPage {
 		Actions action = new Actions(driver);
 		action.click();
 		action.moveToElement(element).perform();
+		
+		
 		
 	}
 }
