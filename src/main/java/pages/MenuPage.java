@@ -45,9 +45,7 @@ public class MenuPage {
 	public void hoverElement(By locator) {
 		WebElement element = driver.findElement(locator);
 		Actions action = new Actions(driver);
-		action.click();
 		action.moveToElement(element).perform();
-		
 		
 		
 	}
