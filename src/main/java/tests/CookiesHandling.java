@@ -44,7 +44,7 @@ public class CookiesHandling extends BaseTest {
 	public void deleteAllCookie() {
 		
 		driver.manage().deleteAllCookies();
-		System.out.println("-----------------------------1------------------------"); 
+		System.out.println("-----------------------------2------------------------"); 
 		Set<Cookie> allCookies = driver.manage().getCookies();
 		System.out.println(allCookies); 	 
 	}
