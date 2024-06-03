@@ -25,10 +25,11 @@ public class JSExecutorTema extends BaseTest {
         jse.executeScript("arguments[0].click()", PostFormats);
         Thread.sleep(3000);
        
-        /*
+       
         WebElement galleryFormat = driver.findElement(By.cssSelector("a[href*='gallery-format']"));
         jse.executeScript("arguments[0].scrollIntoView()", galleryFormat);
 		jse.executeScript("arguments[0].click()", galleryFormat);
+		
 		
 		WebElement comment = driver.findElement(By.cssSelector("textarea[id=comment]"));
         jse.executeScript("arguments[0].scrollIntoView()", comment);
@@ -45,10 +46,7 @@ public class JSExecutorTema extends BaseTest {
         
         WebElement postCommentButton = driver.findElement(By.cssSelector("input[id=send_comment]"));
 		jse.executeScript("arguments[0].click()", postCommentButton);
-        */
-        
-        jse.executeScript("document.getElementsByClassName('gallery-format')[0].scrollIntoView()");
-		
+     		
 		
 		
 	}
