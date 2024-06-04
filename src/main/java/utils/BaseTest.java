@@ -22,7 +22,7 @@ public class BaseTest {
 	
 	public WebDriver driver;
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setup() {
 		
 		driver = new EdgeDriver();
@@ -32,7 +32,7 @@ public class BaseTest {
 		
 		}
 	
-	@AfterMethod
+	@AfterClass
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.quit(); //inchide toate taburile
